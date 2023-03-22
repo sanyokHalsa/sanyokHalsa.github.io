@@ -39,21 +39,23 @@ ul{
     text-decoration: none;
   }
 }
-
+h2{
+  height: 70px;
+  line-height: 70px;
+  font-size: 24px;
+  padding: 10px 0;
+}
 section{
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  h2{
-    height: 70px;
-    line-height: 70px;
-    font-size: 24px;
-  }
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   article{
+    min-width: 300px;
     cursor: pointer;
     border: 1px solid #006d77;
     width: 40vw;
-    margin-left: 30vw;
     margin-bottom: 50px;
     a{
       text-decoration: none;
@@ -62,6 +64,7 @@ section{
       font-size: 24px;
     }
     img{
+      min-width: 300px;
       width: 40vw;
     }
   }
@@ -136,5 +139,20 @@ footer{
       transition-duration: 1s;
     }
   }
-
+}
+@media screen and (max-width:700px) {
+  section {
+    article {
+      width: 70vw;
+      img {
+        width: 70vw;
+      }
+    }
+  }
+  footer{
+    form{
+      width: 80vw;
+      margin-left: 10vw;
+    }
+  }
 }
